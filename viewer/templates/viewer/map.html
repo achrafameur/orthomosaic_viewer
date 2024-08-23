@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map Viewer</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/styles.css">
+</head>
+<body>
+    <div class="map-container">
+        <div id="map">{{ map|safe }}</div>
+        <div class="loader" id="loader"></div>
+    </div>
+
+    <script>
+        document.getElementById('loader').style.display = 'block';
+
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                document.getElementById('loader').style.display = 'none';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
