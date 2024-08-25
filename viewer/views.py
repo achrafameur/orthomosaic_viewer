@@ -3,7 +3,22 @@ from django.shortcuts import render
 from .utils import get_raster_data
 import os
 from django.conf import settings
-from pyproj import Transformer
+from pyproj import Transformer     
+
+def image_info_view(request):
+    try:
+        raster_info = get_raster_data('/app/data/export_result.tif')
+        print("Raster info loaded successfully")
+        
+        context = {
+            'image_path': '/app/data/export_result.tif',
+            'bounds': raster_info["bounds"]
+        }
+        
+        return render(request, 'viewer/image_info.html', context)
+    except Exception as e:
+        print(f"Error loading raster: {e}")
+        return render(request, 'viewer/error.html', {'error_message': str(e)})
 
 def map_view(request):
     try:

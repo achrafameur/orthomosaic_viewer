@@ -3,3 +3,4 @@ rasterio
 folium
 django-leaflet
 pyproj
+pillow
