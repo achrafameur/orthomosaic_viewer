@@ -7,21 +7,23 @@
     <link rel="stylesheet" href="../../static/css/styles.css">
 </head>
 <body>
-    <h1>Raster Information</h1>
-    
-    <div class="content-wrapper">
-        <p><strong>Bornes :</strong></p>
-        <ul>
-            <li><strong>Left:</strong> {{ bounds.left }}</li>
-            <li><strong>Bottom:</strong> {{ bounds.bottom }}</li>
-            <li><strong>Right:</strong> {{ bounds.right }}</li>
-            <li><strong>Top:</strong> {{ bounds.top }}</li>
-        </ul>
-    </div>
-    <div class="map-link">
-        <a href="/map/">
-            <button class="view-map-btn">Voir sur la Map</button>
-        </a>
+    <div class="container">
+        <h1>Raster Information</h1>
+        <div class="content-wrapper">
+            <p><strong>Bornes :</strong></p>
+            <ul class="left-spacing">
+                <li><strong>Left:</strong> {{ bounds.left }}</li>
+                <li><strong>Bottom:</strong> {{ bounds.bottom }}</li>
+                <li><strong>Right:</strong> {{ bounds.right }}</li>
+                <li><strong>Top:</strong> {{ bounds.top }}</li>
+            </ul>
+        </div>
+        <div class="map-link">
+            <a href="/map/">
+                <button class="view-map-btn">Voir sur la Map</button>
+            </a>
+        </div>
     </div>
 </body>
+
 </html>
